@@ -1,0 +1,9 @@
+# Validation of the post-audit snapshot - 22 October 2026
+
+New execution: `python reproduce.py --post-audit`, exit 0. The command verified the eight raw-file hashes against the immutable source manifest, reran full/context-only/reduced-adjustment and English-region GLMs, reference-population contrasts, descriptive test calibration, and all **21 tests (21 passed)**. Three third-party pending-deprecation warnings remain. The two new tests check contrasts against independent-auditor calculations and calibration score equations against unchanged test probabilities.
+
+The same existing Python 3.12.14 environment was used; no fresh installation or cross-platform validation was performed. Raw data were copied from the unchanged local official-v1 files for this run; no new source download is claimed. The entry-point log is supplied in reports/post_audit_reproduction.log. New outputs are in outputs/post_audit/. Primary definitions and immutable reference_tables/ were not changed. Main primary numerical tables were compared against the previous snapshot.
+
+Earlier dated evidence: the independent 22 October audit documented raw-feature reconstruction, original-model refits, B/C/D retraining, 19 original tests and independent primary calculations. That full historical pipeline was not rerun again for these post-audit additions. The wider tree/window search remains outside the manuscript reproduction scope. `--download` alone does not refit models.
+
+The public baseline is https://github.com/amochi1983/oulad-engagement-area-deprivation at commit 1ea86090ea87cea0560189cc7b43b92dad337118. The current local post-audit changes are supplied in S2 and await publication of their update. No permanent code DOI is assigned. Computational validation does not establish ethics approval, final human-author approval or acceptance by a journal.
